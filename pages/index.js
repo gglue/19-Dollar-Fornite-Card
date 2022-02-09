@@ -58,9 +58,7 @@ function Home(){
                 </Row>
                 <Row className = "justify-content-center">
                     <Col xs={12} md={5} className = "my-5">
-                        <Elements stripe={stripePromise}>
-                            <CardInfo />
-                        </Elements>
+                        <CardInfo />
                     </Col>
                 </Row>
             </Container>
