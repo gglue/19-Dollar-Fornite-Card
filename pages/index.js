@@ -1,12 +1,9 @@
 import {Container, Row, Col, Image} from 'react-bootstrap';
 import Head from 'next/head';
-import {loadStripe} from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js";
 import {motion} from 'framer-motion';
 import CardInfo from './components/card.js';
 function Home(){
-    
-    const stripePromise = loadStripe("pk_test_51JPZGuJfyBMg9VM8VrDgdBaJSx9VlrKA5Xs0pnuOKDRKLIgPqx0yBLBe8dojGZnpEeelmPQdENpLPSuVFcD2qWFU00t8IPGWzO");
 
     const titleVariant = {
         hidden: {

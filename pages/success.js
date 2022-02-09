@@ -23,8 +23,11 @@ function Success(){
             opacity: 0
         }
     }
-
+    let loading = false;
     const router = useRouter();
+    if (typeof router.query.name != "undefined"){
+        loading = true;
+    }
     return(
         <nav className="home">
             <Head>
@@ -42,9 +45,9 @@ function Success(){
                         <motion.div variants={cardVariant} initial = "hidden" animate= "visible" exit = "exit">
                             <Card className = "grad border-0">
                                 <Card.Title><h1>Success!</h1></Card.Title>
-                                <Card.Text>Thank you for buying a Fortnite card {router.query.name}!</Card.Text>
-                                <Card.Text>A confirmation email will be sent to {router.query.email} :)</Card.Text>
-                                <Card.Text>Your Fortnite card should arrive at {router.query.address} in a week. (totally not a scam) :D</Card.Text>
+                                <Card.Text>Thank you for buying a Fortnite card {loading ? router.query.name : "John Doe"}!</Card.Text>
+                                <Card.Text>A confirmation email will be sent to {loading ? router.query.email : "John@gmail.com"} :)</Card.Text>
+                                <Card.Text>Your Fortnite card should arrive at {loading ? router.query.address: "123 Baker Street"} in a week. (totally not a scam) :D</Card.Text>
                             </Card>
                         </motion.div>
                     </Col>
