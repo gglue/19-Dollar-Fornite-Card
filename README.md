@@ -1,4 +1,4 @@
-# livictor.com/fortnite
+# https://19-dollar-fortnite-card.vercel.app/
 
 This project was created using Next.js and Node.js and also uses the following modules: <br/>
 [Framer-Motion](https://github.com/framer/motion) <br/>
