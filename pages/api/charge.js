@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-const stripe = new Stripe("");
+const stripe = new Stripe("sk_test_51JPZGuJfyBMg9VM81qp3ZmlUub2lsDbSrV4IyfbevwS07N4zAzOWVDqYnp9kTJ3PTDLNIzXED8sssVxDwHWQisdy00BkajGFMS");
 
 async function Charge(req, res){
     const {id, amount} = req.body;
@@ -13,13 +13,12 @@ async function Charge(req, res){
             confirm: true
         });
 
-        console.log(payment);
         return res.status(200).json({
             confirm: "goodjob"
         });
     }
+    
     catch (error){
-        console.log(error.message);
         return res.status(400).json({
             message: error.message
         })
