@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-const stripe = new Stripe("sk_test_51JPZGuJfyBMg9VM81qp3ZmlUub2lsDbSrV4IyfbevwS07N4zAzOWVDqYnp9kTJ3PTDLNIzXED8sssVxDwHWQisdy00BkajGFMS");
+const stripe = new Stripe(process.env.secret);
 
 async function Charge(req, res){
     const {id, amount} = req.body;
