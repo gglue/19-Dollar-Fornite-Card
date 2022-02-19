@@ -48,7 +48,7 @@ function Home(){
             <Container>
                 <Row className = "justify-content-center">
                     <Col xs={12} md={5} className = "my-5 text-center">
-                        <motion.h1 variants={titleVariant} initial = "hidden" animate= "visible" exit = "exit"><b>{process.env.SECRET_KEY}, <br></br>Who Wants it?</b></motion.h1>
+                        <motion.h1 variants={titleVariant} initial = "hidden" animate= "visible" exit = "exit"><b>19 Dollar Fortnite Card, <br></br>Who Wants it?</b></motion.h1>
                     </Col>
                 </Row>
                 <Row>
